@@ -1,0 +1,15 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description: `refactor recarga`
+// File: index.scss
+// Location: @/components/container
+//
+
+.container {
+  @include width(370);
+  @include height(1, min);
+
+  @include margin(horizontal, auto);
+  @include padding(horizontal, 15);
+} // container

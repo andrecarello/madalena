@@ -1,0 +1,68 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description: `refactor recarga`
+// File: index.scss
+// Location: @/components/banners/default
+//
+
+._banners {
+	&\:default {
+		@include margin(only, (top: 20, left: auto, right: auto));
+		@include padding(only, (top: 26, bottom: 43));
+		@include background(white);
+
+		&-title {
+			@include text-color(orange);
+			@include margin(horizontal, auto);
+			@include width(340);
+		} // title
+
+		&-items {
+			@include width(490);
+			@include margin(only, (top: 20, left: auto, right: auto));
+			@include display(flex);
+			overflow: auto;
+			@include scrollbar('horizontal', 0);
+		} // items
+
+		&-item {
+			// resolve this
+			width: 100%;
+			max-width: calc(100% / 2.5);
+			flex: 0 0 calc(100% / 2.5);
+			//
+			@include position(relative);
+			@include margin(only, (right: 11));
+			overflow: hidden;
+		} // item
+
+		&-image {
+			@include display(block);
+			@include height(142);
+			@include width(auto);
+			object-fit: cover;
+
+			img {
+				@include display(block);
+				@include height(142);
+				@include width(auto);
+				object-fit: cover;
+			}
+		} // image
+
+		&-brand {
+			@include position(absolute, (top: 10, right: 10));
+			@include circle(49);
+			overflow: hidden;
+			@include flex(center, center);
+			@include background(white);
+			border: 1px solid color(light-grey);
+
+			> img {
+				@include display(block);
+				@include width(auto);
+			} // img
+		} // brand
+	} // default
+} // banners

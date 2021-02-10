@@ -1,0 +1,71 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Oi
+// Description: Code for `Conhecimentos e negocios`
+// File: index.scss
+// Location: @/views/home
+//
+
+.home {
+	&\:subtitle {
+		@include color(white);
+		font-size: rem(18);
+		font-weight: bold;
+		text-transform: uppercase;
+	} // subtitle
+
+	&\:text {
+		@include color(white);
+		font-size: rem(16);
+
+		@include margin(only, (bottom: 20));
+	} // text
+
+	&\:recharges {
+		@include margin(only, (top: 20));
+		@include grid(repeat(auto-fill, minmax(calc(33% - 10px), 1fr)), rem(15));
+
+		&-item {
+			@include height(100);
+			@include background(white);
+
+			@include position(relative);
+			@include flex(center, center);
+			@include radius(4);
+			@extend %clicable;
+
+			&:before {
+				content: attr(data-bonus);
+				@include position(absolute, (left: 0, right: 0, bottom: 11));
+				@include text-style((size: 10, align: center), dark-grey);
+			} // before
+		} // item
+
+		&-text {
+			@include text-style((
+          family: 'Simplon Headline',
+          size: 24,
+          spacing: -0.5,
+          align: center,
+          weight: bold
+        ),green );
+    } // text
+
+    &-more {
+			@include text-style((
+          family: 'Simplon Headline',
+          size: 20,
+          spacing: -0.5,
+          align: center,
+          weight: bold
+        ),green );
+		} // text
+
+		&-info {
+			@include text-style((
+        family: 'Simplon',
+        size: 9
+      ), dark-grey);
+		} // info
+	} // recharges
+} // home

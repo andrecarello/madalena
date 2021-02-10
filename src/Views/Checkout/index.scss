@@ -1,0 +1,72 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description:
+// File: index.scss
+// Location: @/views/checkout
+//
+
+.form {
+	&\:content {
+		@include background(white);
+
+		@include grow(true);
+		@include padding(only, (top: 40, left: 15, right: 15));
+
+		box-shadow: 0 -1px rem(20) rgba(#242424, 0.05);
+		@include position(relative);
+	} // content
+
+	&\:rule {
+		@include display(block);
+		@include margin(only, (left: auto, right: auto, bottom: 40));
+		@include size(2, 32);
+		@include background(green);
+		border: none;
+	} // rule
+
+	&\:title {
+		@include text-style((
+      size: 23,
+      line-height: 23,
+      align: center,
+      weight: bold
+    ), white);
+
+		@include margin(only, (bottom: 24));
+	} // title
+
+	&\:group {
+		@include position(relative);
+		@include width(320);
+		@include height(75, min);
+		@include margin(horizontal, auto);
+		@include padding(only, (bottom: 22));
+
+		label {
+			@include text-style((
+        size: 14
+      ), grey);
+			@include height(24, min);
+			@include flex(flex-start, center);
+		}
+
+		input,
+		select {
+			@include display(block);
+			@include height(50);
+			@include width(auto);
+			@include background(white);
+			border-radius: 0;
+			border: none;
+			-webkit-appearance: none;
+			border-bottom: rem(1) solid color(green);
+
+			@include text-style((size: 30, weight: 300), dark-grey);
+
+			@include placeholder {
+				@include text-style((size: 30, weight: 300), dark-grey);
+			}
+		}
+	} // control
+} // form

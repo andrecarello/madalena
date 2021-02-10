@@ -1,0 +1,48 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Oi
+// Description: Nuxt styles
+// File: settings.scss
+// Location: @/assets/sass/core
+//
+
+// define [ language ]
+$lang: 'en';
+
+// define [ locations ]
+$fonts_location: '/assets/fonts/';
+$images_location: '/assets/images/';
+$backgrounds_location: '#{$images_location}backgrounds/';
+
+// define [ browser options ]
+$browser-context: 16;
+$box-shadow: 0 5px 20px rgba(#242424, 0.16);
+
+// define [ suffix and preffix ]
+$prefix: '';
+$suffix: '';
+
+// define [ spaces ]
+$gutter: 20px;
+$margin: 20px;
+
+// define [ breapoints ]
+$breakpoints: (sm : 576px, md : 768px, lg : 992px, xl : 1200px) !default;
+
+// define [ animations and timing ]
+$ease: ease;
+$timing: .25s;
+
+// cria o array de fonts separados por espaco
+// ex: "Proxima Nova" ProximaNova-Regular 400,
+// $font, $name, $local, $weight
+$fonts: (
+  "Simplon" simplonbp-light-webfont 300,
+  "Simplon" simplonbp-regular-webfont 400,
+  "Simplon" simplonbp-medium-webfont 500,
+  "Simplon" simplonbp-bold-webfont 700,
+  "Simplon Headline" simplonoi-headline 400
+);
+
+// create [ WEBFONTS ]
+$open_sans: "Open Sans";

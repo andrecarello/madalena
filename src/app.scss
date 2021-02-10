@@ -1,0 +1,23 @@
+/*
+ Author: OSTON <ti@oston.io>
+ Name: Oi
+ Description: Code for `Conhecimentos e negocios`
+ File: app.scss
+ Location: @/
+*/
+
+// -> import core
+@import "./assets/sass/core/settings";
+@import "./assets/sass/core/functions";
+@import "./assets/sass/core/mixins";
+@import "./assets/sass/core/colors";
+@import "./assets/sass/core/extends";
+@import "./assets/sass/core/fonts";
+@import "./assets/sass/core/animations";
+
+@import "./assets/sass/layout/font";
+@import "./assets/sass/layout/display";
+@import "./assets/sass/layout/sizes";
+
+@import "./assets/sass/layout/global";
+@import "./assets/sass/components/toast";

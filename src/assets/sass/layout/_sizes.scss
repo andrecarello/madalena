@@ -1,0 +1,45 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Oi
+// Description: Nuxt styles
+// File: display.scss
+// Location: @/assets/sass/layout
+//
+
+@mixin height($height: 0, $min: 'false') {
+	@if quote($height) == 'screen' {
+		height: 100vh;
+	} @else {
+		$__height: unit($height);
+
+		@if quote($min) == 'min' {
+			min-height: if(unit($height) == "", rem($height), $height);
+			height: auto;
+		} @else {
+			height: if(unit($height) == "", rem($height), $height);
+		}
+	}
+}
+
+@mixin width($min: 0, $flex: 'false') {
+
+	@if quote(type-of($min)) == 'number' {
+		@if quote($flex) == 'flex' {
+			flex: 0 0 rem($min);
+			max-width: rem($min);
+    } @else {
+      width: 100%;
+      max-width: rem($min);
+    }
+  } @else if quote($min) == 'auto' {
+    width: 100%;
+  } @else {
+		width: 100%;
+		max-width: $min;
+	}
+}
+
+@mixin size($height, $width: $height) {
+	@include height($height);
+	@include width($width);
+}

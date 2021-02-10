@@ -1,0 +1,17 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description: `refactor recarga`
+// File: position.scss
+// Location: @/assets/sass/layout
+//
+
+@mixin position($position, $list: '') {
+	position: $position;
+
+	@if quote(type-of($list)) == 'map' {
+		@each $property, $value in $list {
+			#{$property}: rem($value);
+		}
+	}
+}

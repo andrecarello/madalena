@@ -1,0 +1,43 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Oi
+// Description: Refactoring Esportes Radicais
+// File: toast.scss
+// Location: @/assets/sass/components
+//
+
+#toast {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  margin: 0 auto;
+  z-index: 99999;
+
+	padding: rem(25) rem(20);
+
+	@include color(white);
+	font-size: rem(17);
+	font-weight: 400;
+	@include font('Simplon');
+
+	transform: translateY(10px);
+	opacity: 0;
+	visibility: hidden;
+
+  transition: all .2s ease;
+
+  &.error {
+    @include background(danger);
+  }
+
+  &.success {
+    @include background(green);
+  }
+
+	&.active {
+		transform: translateY(0px);
+		opacity: 1;
+		visibility: visible;
+	}
+}

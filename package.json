@@ -1,0 +1,43 @@
+{
+	"name": "vue-front-base",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build"
+	},
+	"dependencies": {
+		"@braid/vue-formulate": "^2.5.0",
+		"@braid/vue-formulate-i18n": "^1.14.0",
+		"axios": "^0.21.1",
+		"core-js": "^3.6.5",
+		"lodash": "^4.17.19",
+		"vue": "^2.6.11",
+		"vue-feather-icons": "^5.1.0",
+		"vue-intersect": "^1.1.6",
+		"vue-pdf": "^4.2.0",
+		"vue-pose": "^0.5.1",
+		"vue-router": "^3.2.0",
+		"vue-slick-carousel": "^1.0.6",
+		"vuex": "^3.4.0"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "~4.5.0",
+		"@vue/cli-plugin-router": "~4.5.0",
+		"@vue/cli-plugin-vuex": "~4.5.0",
+		"@vue/cli-service": "~4.5.0",
+		"axios-mock-adapter": "^1.18.2",
+		"eslint": "^7.9.0",
+		"faker": "^4.1.0",
+		"node-sass": "^4.12.0",
+		"sass-loader": "^8.0.0",
+		"vue-clipboard2": "^0.3.1",
+		"vue-template-compiler": "^2.6.11",
+		"vuex-persist": "^2.2.0"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not dead"
+	]
+}

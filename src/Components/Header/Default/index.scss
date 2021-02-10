@@ -1,0 +1,34 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description: `refactor recarga`
+// File: index.scss
+// Location: @/components/header/default
+//
+
+._header {
+	&\:default {
+		&-content {
+			@include flex(flex-start, center);
+			@include margin(only, (bottom: 15));
+		}
+
+		&-title {
+			@include color(white);
+			text-transform: uppercase;
+			line-height: (34 / 28);
+			font-size: rem(25);
+			@include margin(only, (left: 18));
+		} // title
+
+		&-text {
+      @include text-style((
+        size: 16,
+        line-height: 24,
+        weight: 100
+      ), white);
+
+			@include margin(only, (bottom: 20));
+		} // text
+	} // default
+} // header

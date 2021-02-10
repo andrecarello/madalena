@@ -1,0 +1,47 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description: `refactor recarga`
+// File: index.scss
+// Location: @/components/safetransaction
+//
+
+._safe {
+  @include flex(space-between, center);
+  @include padding(only, (right: 25));
+  @include margin(only, (top: 20, left: auto, right: auto));
+	@include width(320);
+
+	&\:text {
+    @include text-style((
+      size: 9
+    ), white);
+
+		strong {
+      @include display(block);
+      @include text-style((size: 13, weight: bold));
+    }
+
+    small {
+      @include display(block);
+      @include text-style((size: 12));
+      @include margin(only, (top: 10));
+    }
+	}
+
+	&\:mastercard {
+		@include size(20, 25);
+	}
+	&\:visa {
+		@include size(12, 35);
+	}
+	&\:elo {
+		@include size(16, 40);
+	}
+	&\:diners {
+		@include size(18, 22);
+	}
+	&\:hipercard {
+		@include size(16, 35);
+	}
+} // safe

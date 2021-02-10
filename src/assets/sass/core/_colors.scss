@@ -1,0 +1,41 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Oi
+// Description: Nuxt styles
+// File: animations.scss
+// Location: @/assets/sass/core
+//
+
+// social media colors
+$linkedin-color: #8d6cab;
+$facebook-color: #1d3469;
+$google-color: #dd4b39;
+$youtube-color: #cd201f;
+$instagram-color: #e95950;
+
+// project colors
+$white: #fff;
+$grey: #808080;
+$light-grey: #efefef;
+$dark-grey: #4d4d4d;
+$black: #000;
+$green: #00ae15;
+$lime: #8bd523;
+$orange: #ff6d00;
+$yellow: #ffff02;
+$light-orange: #ffe9d9;
+$red: #ff1654;
+
+$colors: (
+	white: $white,
+	grey: $grey,
+	light-grey: $light-grey,
+	dark-grey: $dark-grey,
+	black: $black,
+	green: $green,
+	lime: $lime,
+	orange: $orange,
+	yellow: $yellow,
+	light-orange: $light-orange,
+	red: $red
+);

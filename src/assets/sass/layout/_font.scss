@@ -1,0 +1,51 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Madalena
+// Description: `refactor recarga`
+// File: font.scss
+// Location: @/assets/sass/layout
+//
+
+@mixin text-style($list, $color: 'null') {
+	@if quote(type-of($list)) == 'map' {
+		@each $property, $value in $list {
+			@include __font-style($property, $value);
+		}
+	}
+
+	@if type-of($color) == 'list' {
+		@include text-color(nth($color, 1), nth($color, 2));
+	} @else {
+		@include text-color($color);
+	}
+}
+
+@mixin text-color($color, $opacity: 1) {
+	@if $opacity < 1 {
+		color: rgba(color($color), $opacity);
+	} @else {
+		color: color($color);
+	}
+}
+
+@mixin __font-style($property, $value) {
+	// style, variant, weight, size, line-height, family, spacing, align;
+
+	@if quote($property) == 'size' {
+		@include __set-style($property, rem($value));
+	} @else if quote($property) == 'family' {
+		@include font($value);
+	} @else if quote($property) == 'spacing' {
+		letter-spacing: rem($value);
+	} @else if quote($property) == 'align' {
+		text-align: $value;
+	} @else if quote($property) == 'line-height' {
+		line-height: rem($value);
+	} @else {
+		@include __set-style($property, $value);
+	}
+}
+
+@mixin __set-style($property, $value) {
+	font-#{$property}: $value;
+}
